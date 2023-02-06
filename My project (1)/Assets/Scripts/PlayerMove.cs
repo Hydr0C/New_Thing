@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour
 {
     [SerializeField] float speed = 2f;
-    [SerializeField] float turnSpeed = 10f;
+    //[SerializeField] float turnSpeed = 10f;
     [SerializeField] float jumpSpeed = 10f;
     private Rigidbody rb;
     private bool onFloor = true;
@@ -56,6 +56,7 @@ public class PlayerMove : MonoBehaviour
         }
 
         // Turn
+        /*
         if(Input.GetKey("q"))
         {
             transform.Rotate(-transform.up * Time.deltaTime * turnSpeed);
@@ -64,6 +65,7 @@ public class PlayerMove : MonoBehaviour
         {
             transform.Rotate(transform.up * Time.deltaTime * turnSpeed);
         }
+        */
 
         // Jump
         if(Input.GetKeyDown("space") && onFloor == true)
